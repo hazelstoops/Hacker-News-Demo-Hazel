@@ -1,0 +1,59 @@
+table {
+  width: 50%;
+}
+
+.full-width {
+  font-size: 14px;
+  width: 100%;
+}
+
+.btn{
+    margin: 5px 5px 5px 5px;
+    height: 40px;
+}
+
+li {
+  display: inline;
+  list-style: none;
+  margin: 15px;
+}
+
+.headerbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-block {
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.story-article-excerpt {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+}
+
+.example-label {
+  font-size: 14px;
+  margin: 0 16px 0 8px;
+  min-width: 120px;
+}
+
+.button-row {
+  max-width: 600px;
+}
+
+.button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

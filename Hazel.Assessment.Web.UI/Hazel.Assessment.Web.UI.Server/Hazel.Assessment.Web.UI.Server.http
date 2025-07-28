@@ -1,0 +1,13 @@
+@Hazel.Assessment.Web.UI.Server_HostAddress = http://localhost:5022
+
+###
+
+GET {{Hazel.Assessment.Web.UI.Server_HostAddress}}/aoi/teststory/
+Accept: application/json
+
+###
+
+GET {{Hazel.Assessment.Web.UI.Server_HostAddress}}/api/story?pageNumber=1&pageSize=10
+Accept: application/json
+
+###

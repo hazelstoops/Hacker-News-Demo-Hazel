@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SpaRoot>..\hazel.assessment.web.ui.client</SpaRoot>
+    <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
+    <SpaProxyServerUrl>https://localhost:50109</SpaProxyServerUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\TestStoryController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaProxy">
+      <Version>8.*-*</Version>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Scrutor" Version="6.1.0" />
+    <ProjectReference Include="..\..\Hazel.Assessment.Domain\Hazel.Assessment.Domain.csproj" />
+    <ProjectReference Include="..\hazel.assessment.web.ui.client\hazel.assessment.web.ui.client.esproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>  
+</Project>

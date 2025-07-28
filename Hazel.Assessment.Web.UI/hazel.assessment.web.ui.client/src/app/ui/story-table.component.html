@@ -1,0 +1,45 @@
+<p *ngIf="!stories"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<div class="search-block">
+  <div class="button-row">
+    <input type="text" [(ngModel)]=searchTerm placeholder="Search for..." (keyup)="searchFieldKeyUp($event)">
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-primary" (click)="getStories(true)">Search</button>
+      <button type="button" class="btn btn-outline-primary" (click)="clearSearch()">Clear</button>
+    </div>
+  </div>
+</div>
+
+<div class="story-article-excerpt table-responsive" *ngIf="hasStories()">
+
+  <table class="table align-middle table-striped">
+    <tbody>
+      <tr *ngFor="let story of stories | paginate: { itemsPerPage: pageSize(), currentPage: page(), totalItems: totalCount() }">
+        <td class="text-center">
+          @if (storyHasUrl(story.url)){
+          <a href={{story.url}} target="_blank">{{story.title}}</a>
+          } @else {
+          {{story.title}}
+          }
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>
+
+<div class="mt-3">
+  Items per Page:
+  <select (change)="handlePageSizeChange($event)">
+    @for (size of pageSizes; track size) {
+    <option>
+      {{ size }}
+    </option>
+    }
+  </select>
+</div>
+
+

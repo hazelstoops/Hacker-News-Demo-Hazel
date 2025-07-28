@@ -1,5 +1,5 @@
 # Angular specific
-/dist/
+/dist/**
 /out-tsc/
 /tmp/
 /coverage/
@@ -28,8 +28,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # Visual Code User Preferences
-
+.vs/
 
 # NET Build
 **/bin/**
 **/obj/**
+
+# GitHub
+.github/**

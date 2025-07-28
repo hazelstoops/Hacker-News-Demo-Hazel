@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Hazel.Assessment.Web.UI\\hazel.assessment.web.ui.client\\hazel.assessment.web.ui.client.esproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Hazel.Assessment.Web.UI\\Hazel.Assessment.Web.UI.Server\\Hazel.Assessment.Web.UI.Server.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

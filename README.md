@@ -8,9 +8,7 @@ Browse to the solution folder and open the sln file using the latest version of 
 
 ```Hazel.Assessment.Web.UI.Server```
 
-2. Press F5 or the green play button at the top of Visual Studio. The Server should begin querying news stories, then the ng Angular window should open and start the web page. Using a browser, nagivate to the webpage provided (default is https://127.0.0.1:50109)
-
-3. The Server will start first and start working. The npm build and serve command window should start a few seconds later. When it's done building, use a browser to go the its webpage.
+2. Press F5 or the green play button at the top of Visual Studio. The Server should begin querying news stories, then the ng Angular window should open and start the web page. Using a browser, nagivate to the webpage provided (default is https://127.0.0.1:50109).
 
 ## License
 

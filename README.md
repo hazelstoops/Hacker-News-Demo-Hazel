@@ -2,10 +2,6 @@
 Hacker News Angular App With .NET Backed
 
 
-# HazelAssessment
-
-[Description of task given.]
-
 ## How to Start
 
 Browse to the solution folder and open the sln file in the latest version of Visual Studio 2022. Any Visual Studio features needed should get prompted for installation when the solution opens.

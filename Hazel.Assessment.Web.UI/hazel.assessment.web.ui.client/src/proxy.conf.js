@@ -1,10 +1,7 @@
 const { env } = require('process');
-//import { environment } from './environments/environment';
 
 const target = env.ASPNETCORE_HTTPS_PORT ? `https://localhost:${env.ASPNETCORE_HTTPS_PORT}` :
-  env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'http://localhost:5022';
-
-//const target = environment.apiUrl;
+  env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'https://localhost:5022';
 
 const PROXY_CONFIG = [
   {
@@ -12,12 +9,12 @@ const PROXY_CONFIG = [
       "/story"
     ],
     target,
-    secure: false
+    secure: true
   },
   {
     "/*": {
       "target": target,
-      "secure": false,
+      "secure": true,
       "changeOrigin": true
     }
   }

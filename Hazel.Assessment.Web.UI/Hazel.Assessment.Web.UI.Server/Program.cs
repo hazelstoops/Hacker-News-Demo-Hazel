@@ -1,5 +1,6 @@
 using Hazel.Assessment.Web.UI.Server;
 
+// made public for Integration Test Collection
 public class Program
 {
     /// <summary>
@@ -30,11 +31,11 @@ public class Program
 
         app.MapControllers();
 
+        app.UseHttpsRedirection();
+        app.UseDefaultFiles();
+        app.UseStaticFiles();
 
-
-        app.UseRouting();
-
-        //app.MapFallbackToFile("/index.html");
+        app.MapFallbackToFile("/index.html");
 
         app.Run();
 
